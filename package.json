@@ -14,7 +14,9 @@
 		"lint": "prettier --check . && eslint .",
 		"test:e2e": "playwright test",
 		"test": "npm run test:e2e",
-		"jest": "jest"
+		"jest": "jest",
+		"start-supabase": "npx supabase start",
+		"stop-supabase": "npx supabase stop"
 	},
 	"dependencies": {
 		"@lucide/svelte": "^0.546.0",
