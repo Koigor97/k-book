@@ -17,6 +17,22 @@ devLoadAlwaysFiles:
   - docs/architecture/coding-standards.md
   - docs/architecture/tech-stack.md
   - docs/architecture/source-tree.md
+  - docs/architecture/ai-mcp-tooling-guidance.md
+  - docs/architecture/backend-architecture.md
+  - docs/architecture/frontend-architecture.md
+  - docs/architecture/api-specification.md
+  - docs/architecture/checklist-results-report.md
+  - docs/architecture/coding-standards.md
+  - docs/architecture/components.md
+  - docs/architecture/data-models.md
+  - docs/architecture/database-schema.md
+  - docs/architecture/error-handling-strategy.md
+  - docs/architecture/security-and-performance.md
+  - docs/architecture/testing-strategy.md
+  - docs/architecture/unified-project-structure.md
+  - docs/architecture/high-level-architecture.md
+  - docs/architecture/development-workflow.md
+  - docs/architecture/core-workflows.md
 devDebugLog: .ai/debug-log.md
 devStoryLocation: docs/stories
 slashPrefix: BMad
