@@ -30,3 +30,4 @@ vite.config.ts.timestamp-*
 docs/
 AGENTS.md
 prompts/
+.ignore/
