@@ -157,6 +157,3 @@ Position KBook as the trusted visitor management layer for West African public s
 - Role-playing and scenario analyses confirmed audit trails, sync visibility, and paper-log recovery as make-or-break adoption factors.
 - Question storming highlighted compliance reporting, device governance, and pilot credibility needs across ministries, schools, and clinics.
 
-### C. References
-
-- docs/brainstorming-session-results.md — Brainstorming session results (2025-10-23)
