@@ -1,70 +1,24 @@
 {
-	"name": "k-book",
-	"private": true,
-	"version": "0.0.1",
-	"type": "module",
-	"scripts": {
-		"dev": "vite dev",
-		"build": "vite build",
-		"preview": "vite preview",
-		"prepare": "svelte-kit sync || echo ''",
-		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
-		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-		"format": "prettier --write .",
-		"lint": "prettier --check . && eslint .",
-		"test:e2e": "playwright test",
-		"test": "npm run test:e2e",
-		"jest": "jest",
-		"start-supabase": "npx supabase start",
-		"stop-supabase": "npx supabase stop"
-	},
-	"dependencies": {
-		"@lucide/svelte": "^0.546.0",
-		"@supabase/ssr": "^0.7.0",
-		"@supabase/supabase-js": "^2.76.1",
-		"clsx": "^2.1.1",
-		"tailwind-merge": "^3.3.1",
-		"tw-animate-css": "^1.4.0"
-	},
-	"devDependencies": {
-		"@babel/preset-env": "^7.28.3",
-		"@eslint/compat": "^1.4.0",
-		"@eslint/js": "^9.36.0",
-		"@playwright/test": "^1.55.1",
-		"@sveltejs/adapter-auto": "^6.1.0",
-		"@sveltejs/kit": "^2.43.2",
-		"@sveltejs/vite-plugin-svelte": "^6.2.0",
-		"@tailwindcss/forms": "^0.5.10",
-		"@tailwindcss/typography": "^0.5.18",
-		"@tailwindcss/vite": "^4.1.13",
-		"@testing-library/dom": "^10.4.1",
-		"@testing-library/svelte": "^5.2.8",
-		"@testing-library/user-event": "^14.6.1",
-		"@types/node": "^22",
-		"babel-jest": "^30.2.0",
-		"eslint": "^9.36.0",
-		"eslint-config-prettier": "^10.1.8",
-		"eslint-plugin-svelte": "^3.12.4",
-		"globals": "^16.4.0",
-		"jest": "^30.2.0",
-		"jest-environment-jsdom": "^30.2.0",
-		"prettier": "^3.6.2",
-		"prettier-plugin-svelte": "^3.4.0",
-		"prettier-plugin-tailwindcss": "^0.6.14",
-		"svelte": "^5.39.5",
-		"svelte-check": "^4.3.2",
-		"svelte-jester": "^5.0.0",
-		"tailwind-variants": "^3.1.1",
-		"tailwindcss": "^4.1.13",
-		"typescript": "^5.9.2",
-		"typescript-eslint": "^8.44.1",
-		"vite": "^7.1.7"
-	},
-	"jest": {
-		"transform": {
-			"^.+\\.svelte$": "svelte-jester",
-			"^.+\\.js$": "babel-jest"
-		},
-		"testEnvironment": "jsdom"
-	}
+  "name": "k-book",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "packageManager": "pnpm@9.12.1",
+  "scripts": {
+    "dev": "pnpm --filter web dev",
+    "build": "pnpm -r build",
+    "lint": "pnpm -r lint",
+    "check": "pnpm -r check",
+    "test": "pnpm -r test",
+    "test:e2e": "pnpm --filter web test:e2e",
+    "prepare": "pnpm --filter web prepare",
+    "start-supabase": "pnpm --filter worker supabase:start",
+    "stop-supabase": "pnpm --filter worker supabase:stop",
+    "migrate": "pnpm --filter worker supabase:migrate"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.56.1",
+    "@types/node": "22.12.0"
+  },
+  "playgroundSupport": "true"
 }
