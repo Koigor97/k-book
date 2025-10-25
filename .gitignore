@@ -24,9 +24,9 @@ vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 
 # BMAD Method
-.bmad-core
-.gemini
-.github
+.bmad-core/
+.gemini/
+.github/
 docs/
 AGENTS.md
 prompts/
