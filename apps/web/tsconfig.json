@@ -1,0 +1,26 @@
+{
+	"$schema": "https://json.schemastore.org/tsconfig",
+	"extends": "./.svelte-kit/tsconfig.json",
+	"compilerOptions": {
+		"moduleResolution": "Bundler",
+		"allowJs": true,
+		"checkJs": true,
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"resolveJsonModule": true,
+		"skipLibCheck": true,
+		"strict": true,
+		"types": ["vite/client", "svelte"]
+	},
+	"include": [
+		"src/**/*",
+		"svelte.config.js",
+		"vite.config.ts",
+		"vitest.config.ts",
+		"tailwind.config.ts",
+		"postcss.config.cjs",
+		".svelte-kit/ambient.d.ts",
+		".svelte-kit/non-ambient.d.ts",
+		".svelte-kit/types/**/*.d.ts"
+	]
+}
