@@ -31,7 +31,7 @@ vite.config.ts.timestamp-*
 # BMAD Method
 .bmad-core/
 .gemini/
-
+.github/workflows
 docs/
 AGENTS.md
 prompts/
