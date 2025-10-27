@@ -37,6 +37,7 @@ declare module '$env/static/private' {
 	export const DEFAULT_TIMEZONE: string;
 	export const SYNC_QUEUE_MAX_BATCH: string;
 	export const npm_package_devDependencies__tailwindcss_typography: string;
+	export const npm_config_save_dev: string;
 	export const npm_package_scripts_test_e2e: string;
 	export const npm_package_devDependencies_prettier: string;
 	export const TERM_PROGRAM: string;
@@ -121,6 +122,7 @@ declare module '$env/static/private' {
 	export const VSCODE_GIT_ASKPASS_MAIN: string;
 	export const npm_package_scripts_test: string;
 	export const npm_package_devDependencies__kbook_config: string;
+	export const npm_package_devDependencies__sveltejs_adapter_vercel: string;
 	export const HOMEBREW_PREFIX: string;
 	export const LOGNAME: string;
 	export const CONDA_PYTHON_EXE: string;
@@ -186,6 +188,7 @@ declare module '$env/dynamic/private' {
 		DEFAULT_TIMEZONE: string;
 		SYNC_QUEUE_MAX_BATCH: string;
 		npm_package_devDependencies__tailwindcss_typography: string;
+		npm_config_save_dev: string;
 		npm_package_scripts_test_e2e: string;
 		npm_package_devDependencies_prettier: string;
 		TERM_PROGRAM: string;
@@ -270,6 +273,7 @@ declare module '$env/dynamic/private' {
 		VSCODE_GIT_ASKPASS_MAIN: string;
 		npm_package_scripts_test: string;
 		npm_package_devDependencies__kbook_config: string;
+		npm_package_devDependencies__sveltejs_adapter_vercel: string;
 		HOMEBREW_PREFIX: string;
 		LOGNAME: string;
 		CONDA_PYTHON_EXE: string;

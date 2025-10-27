@@ -31,6 +31,7 @@
 		"@kbook/config": "workspace:*",
 		"@playwright/test": "^1.56.1",
 		"@sveltejs/adapter-auto": "6.1.0",
+		"@sveltejs/adapter-vercel": "^6.0.0",
 		"@sveltejs/kit": "^2.47.3",
 		"@sveltejs/vite-plugin-svelte": "^6.2.1",
 		"@tailwindcss/forms": "0.5.10",
