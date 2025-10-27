@@ -8,6 +8,10 @@ node_modules
 .wrangler
 /.svelte-kit
 /build
+./apps/web/.svelte-kit
+./apps/web/build
+./apps/web/.vercel
+./apps/web/.output
 
 # OS
 .DS_Store
@@ -27,6 +31,7 @@ vite.config.ts.timestamp-*
 # BMAD Method
 .bmad-core/
 .gemini/
+.github/workflows
 docs/
 AGENTS.md
 prompts/
