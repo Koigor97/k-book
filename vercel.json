@@ -1,5 +1,0 @@
-{
-  "build": {
-    "outputDirectory": "apps/web/vercel/output"
-  }
-}
