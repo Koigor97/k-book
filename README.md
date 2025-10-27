@@ -10,6 +10,36 @@ Across Sierra Leone’s ministries, schools, and clinics, visitor activity is st
 
 KBook delivers an offline-first digital logbook that frontline staff can trust even when power or connectivity disappears. Receptionists authenticate quickly via PIN, capture visitor details with configurable dropdowns, and see clear status cues for saved, syncing, or backlogged entries. Administrators get a unified dashboard with weekly snapshots, searchable audit trails, and print-ready exports tailored for compliance reviews. By combining a shared configuration model with lightweight training materials, backfill workflows, and rapid feedback loops, KBook positions itself as the simplest way for ministries, schools, and clinics to modernize visitor records without bespoke builds.
 
+## Developer Quickstart
+
+- Install dependencies once with `pnpm install`.
+- Start the local Supabase stack whenever you need Postgres and edge functions via `pnpm start-supabase` (Ctrl+C to stop or run `pnpm stop-supabase`).
+- Launch the receptionist/admin app with `pnpm dev` (runs the `apps/web` SvelteKit workspace).
+- Run focused commands per workspace:
+  - `pnpm --filter web test:unit` for vitest checks on routes/services.
+  - `pnpm --filter web test:e2e` for Playwright smoke tests.
+  - `pnpm --filter worker test` for TypeScript + lint validation of Supabase edge code.
+- Call the platform health endpoint locally at `http://localhost:5173/api/health` to verify Supabase connectivity before pushing changes.
+
+### Workspace Layout
+
+- `apps/web` — SvelteKit receptionist/admin shell with Tailwind 4 + shadcn plumbing.
+- `apps/worker` — Supabase edge functions, migrations, and CLI scripts.
+- `packages/shared` — Shared domain types including health-check response contracts.
+- `packages/offline-core` — Offline sync queue placeholder wired into future reception UI.
+- `packages/config` — Central ESLint and TypeScript presets consumed by every workspace.
+
+### Environment Files
+
+- Copy `.env.example` to `.env` and `.env.local.example` to `.env.local` at the repository root (the SvelteKit app is configured via `kit.env.dir = '..'` to read root env files).
+- Health checks rely on `SUPABASE_URL` and `SUPABASE_SERVICE_ROLE_KEY`; without them `/api/health` returns a `503` so CI surfaces misconfiguration.
+
+### CI/CD Overview
+
+- `.github/workflows/ci.yml` runs linting, type checks, worker tests, vitest specs, and Playwright e2e on every push/PR.
+- `.github/workflows/deploy.yml` publishes preview deployments for pull requests and promotes to production on `main`, then deploys Supabase functions via the CLI.
+- Provide `VERCEL_*`, `SUPABASE_*`, and `SUPABASE_ACCESS_TOKEN` secrets in the repository settings before enabling the deploy workflow.
+
 ## Target Users
 
 ### Primary User Segment: Reception Staff at Ministries, Clinics, and Schools
@@ -156,4 +186,3 @@ Position KBook as the trusted visitor management layer for West African public s
 - 2025-10-23 brainstorming session surfaced 80 ideas emphasizing offline resilience, configurability, and rapid training/fallback procedures.
 - Role-playing and scenario analyses confirmed audit trails, sync visibility, and paper-log recovery as make-or-break adoption factors.
 - Question storming highlighted compliance reporting, device governance, and pilot credibility needs across ministries, schools, and clinics.
-

@@ -1,0 +1,17 @@
+{
+	"/(reception)": [],
+	"/(public)": [],
+	"/(admin)": [],
+	"/": [
+		"src/routes/+page.ts"
+	],
+	"/api/health": [
+		"src/routes/api/health/+server.ts"
+	],
+	"/(reception)/check-in": [],
+	"/(admin)/dashboard": [],
+	"/(admin)/exports": [],
+	"/(public)/login": [],
+	"/(admin)/metadata": [],
+	"/(reception)/queue": []
+}
